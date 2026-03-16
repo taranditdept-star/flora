@@ -779,12 +779,13 @@
 
   // window load event
 
-  // Force hide after 1.5 seconds (1500ms) even if videos are still loading
-  setTimeout(function () {
-    if ($('.preloader').length) {
-      $('.preloader').fadeOut();
-    }
-  }, 1500);
+  // Intelligent Preloader Handle
+  if ($(".preloader").length) {
+    // Wait for critical above-the-fold images
+    $(".page-wrapper").imagesLoaded(function() {
+        $(".preloader").fadeOut(400);
+    });
+  }
 
   function coreInit() {
     thmOwlInit();

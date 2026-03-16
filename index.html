@@ -13,6 +13,12 @@
     <meta name="description"
         content="Alefox is a modern HTML Template for agriculture field, farm, farmers, eco solutions and organic food products. Alefox HTML Template perfectly fit for all the green initiatives of the farming communities websites and businesses." />
 
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="assets/images/logo-dark.png" as="image" fetchpriority="high">
+    <link rel="preload" href="assets/images/backgrounds/slider-2-2.png" as="image" fetchpriority="high">
+    <link rel="preload" href="assets/images/backgrounds/slider-2-3.png" as="image" fetchpriority="high">
+    <link rel="preload" href="assets/images/loader.png" as="image">
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,13 +84,22 @@
         <div class="preloader__image" style="background-image: url(assets/images/loader.png);"></div>
     </div>
     <script>
-        // Emergency preloader bypass
+        // Intelligent preloader reveal
         (function() {
             var preloader = document.querySelector('.preloader');
             if (preloader) {
-                setTimeout(function() {
-                    preloader.style.display = 'none';
-                }, 1500); // Absolute max wait
+                // Maximum fallback to avoid infinite loading if an asset fails
+                var forceHide = setTimeout(function() {
+                    preloader.style.opacity = '0';
+                    setTimeout(function() { preloader.style.display = 'none'; }, 500);
+                }, 8000); 
+
+                window.addEventListener('load', function() {
+                    // When everything (videos/iframes) is loaded
+                    clearTimeout(forceHide);
+                    preloader.style.opacity = '0';
+                    setTimeout(function() { preloader.style.display = 'none'; }, 500);
+                });
             }
         })();
     </script>
@@ -94,7 +109,7 @@
             <div class="main-header__inner">
                 <div class="main-header__logo">
                     <a href="index.html">
-                        <img src="assets/images/logo-dark.png" alt="Alefox HTML" width="147">
+                        <img src="assets/images/logo-dark.png" alt="Alefox HTML" width="147" loading="eager" fetchpriority="high">
                     </a>
                 </div><!-- /.main-header__logo -->
                 <nav class="main-header__nav main-menu">
@@ -338,7 +353,7 @@
                                 <img src="assets/images/resources/about-2-2.png" alt="alefox">
                             </div>
                             <div class="about-two__image__shape">
-                                <img src="assets/images/resources/about-2-shape-2.png" alt="alefox">
+                                <img src="assets/images/resources/about-2-shape-2.png" alt="alefox" loading="eager">
                             </div>
                         </div><!-- /.about-two__image -->
                     </div><!-- /.col-lg-6 -->
