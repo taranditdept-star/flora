@@ -540,14 +540,30 @@
       alefoxowlCarousel.each(function () {
         let elm = $(this);
         let options = elm.data("owl-options");
-        let thmOwlCarousel = elm.owlCarousel(
-          "object" === typeof options ? options : JSON.parse(options)
-        );
+        
+        // Add initialized callback for synchronization
+        let finalOptions = "object" === typeof options ? options : JSON.parse(options);
+        
+        // If it's the main slider, hook into initialization
+        if (elm.closest('.main-slider-two').length) {
+            finalOptions.onInitialized = function() {
+                sliderReady = true;
+                revealSite();
+            };
+        }
+
+        let thmOwlCarousel = elm.owlCarousel(finalOptions);
+        
         elm.find("button").each(function () {
           $(this).attr("aria-label", "carousel button");
         });
       });
+    } else {
+        // No main slider? Mark as ready
+        sliderReady = true;
+        revealSite();
     }
+
     let alefoxowlCarouselNav = $(".alefox-owl__carousel--custom-nav");
     if (alefoxowlCarouselNav.length) {
       alefoxowlCarouselNav.each(function () {
@@ -779,11 +795,31 @@
 
   // window load event
 
-  // Intelligent Preloader Handle
+  // Hard Synchronized Preloader Handle
+  let sliderReady = false;
+  let imagesReady = false;
+
+  function revealSite() {
+    if (sliderReady && imagesReady) {
+      $("body").addClass("site-is-ready");
+      if ($(".preloader").length) {
+        $(".preloader").fadeOut(600);
+      }
+    }
+  }
+
+  // Fallback for safety (8 seconds)
+  setTimeout(function() {
+    sliderReady = true;
+    imagesReady = true;
+    revealSite();
+  }, 8000);
+
   if ($(".preloader").length) {
-    // Wait for critical above-the-fold images
-    $(".page-wrapper").imagesLoaded(function() {
-        $(".preloader").fadeOut(400);
+    // Wait for critical images (Hero + Logo)
+    $(".main-slider-two, .main-header__logo").imagesLoaded(function() {
+      imagesReady = true;
+      revealSite();
     });
   }
 
@@ -797,9 +833,7 @@
   coreInit();
 
   $(window).on("load", function () {
-    if ($(".preloader").length) {
-      $(".preloader").fadeOut();
-    }
+    // Other secondary initializations
 
     if ($(".circle-progress").length) {
       $(".circle-progress").appear(function () {

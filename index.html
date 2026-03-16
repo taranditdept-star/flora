@@ -72,6 +72,16 @@
         .main-slider-two__bg iframe {
             z-index: 1;
         }
+        /* Hard hide until ready-state is reached */
+        .page-wrapper {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        body.site-is-ready .page-wrapper {
+            opacity: 1;
+            pointer-events: auto;
+        }
     </style>
 </head>
 
@@ -213,20 +223,19 @@
                                 </div>
                                 <div class="main-slider-two__shape-one"><img
                                         src="assets/images/shapes/satisfaction-badge.png"
-                                        alt="100% Satisfaction Guarantee" class="blue-badge-filter">
+                                        alt="100% Satisfaction Guarantee" class="blue-badge-filter" loading="eager" fetchpriority="high">
                                 </div>
                                 <!-- slider-shape-one -->
                             </div>
                         </div>
                         <div class="main-slider-two__shape-two"><img src="assets/images/shapes/slider-2-shape-2.png"
-                                alt="alefox"></div><!-- slider-shape-two -->
+                                alt="alefox" loading="eager" fetchpriority="high"></div><!-- slider-shape-two -->
                     </div>
                 </div>
                 <div class="item" data-dot="<button>02</button>">
                     <div class="main-slider-two__item">
                         <div class="main-slider-two__bg">
-                            <img src="assets/images/backgrounds/slider-2-2.png" alt="alefox" />
-                            <img src="assets/images/backgrounds/slider-2-2.png" alt="alefox" />
+                            <img src="assets/images/backgrounds/slider-2-2.png" alt="alefox" loading="eager" fetchpriority="high" />
                         </div>
                         <div class="container">
                             <div class="main-slider-two__content">
