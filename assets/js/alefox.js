@@ -786,14 +786,19 @@
     }
   }, 1500);
 
+  function coreInit() {
+    thmOwlInit();
+    thmTinyInit();
+    alefoxSlickInit();
+    priceFilter();
+  }
+
+  coreInit();
+
   $(window).on("load", function () {
     if ($(".preloader").length) {
       $(".preloader").fadeOut();
     }
-    thmOwlInit();
-    thmTinyInit();
-    alefoxSlickInit()
-    priceFilter();
 
     if ($(".circle-progress").length) {
       $(".circle-progress").appear(function () {
