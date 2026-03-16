@@ -1,7 +1,7 @@
 (function ($) {
     "use strict";
 
-    $(window).on("load", function () {
+    $(document).ready(function () {
         bwsplit_text();
     });
 
