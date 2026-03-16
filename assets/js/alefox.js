@@ -784,7 +784,7 @@
     if ($('.preloader').length) {
       $('.preloader').fadeOut();
     }
-  }, 800);
+  }, 1500);
 
   $(window).on("load", function () {
     if ($(".preloader").length) {

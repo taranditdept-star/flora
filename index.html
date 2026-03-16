@@ -141,8 +141,9 @@
 	    }'>
                 <div class="item" data-dot="<button>01</button>">
                     <div class="main-slider-two__item">
-                        <div class="main-slider-two__bg">
-                            <div style="padding:56.25% 0 0 0;position:relative;width:100%;height:100%;"><iframe src="https://player.vimeo.com/video/1173965936?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;" title="0102"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                        <div class="main-slider-two__bg" style="background-image: url(assets/images/backgrounds/slider-2-2.png); background-size: cover; background-position: center;">
+                            <div style="width:100%;height:100%;"><iframe src="https://player.vimeo.com/video/1173965936?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;" title="0102"></iframe></div>
+                            <script src="https://player.vimeo.com/api/player.js"></script>
                         </div>
                         <div class="container">
                             <div class="main-slider-two__content">
@@ -938,8 +939,9 @@
             <div class="cta-four__bg-overlay"
                 style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 0;">
             </div>
-            <div class="cta-four__bg" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: -1;">
-                <div style="padding:56.25% 0 0 0;position:relative;width:100%;height:100%;"><iframe src="https://player.vimeo.com/video/1173966690?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;" title="1477987_People_Technology_3840x2160"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            <div class="cta-four__bg" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: -1; background-image: url(assets/images/backgrounds/page-header-bg-1-1.png); background-size: cover; background-position: center;">
+                <div style="width:100%;height:100%;"><iframe src="https://player.vimeo.com/video/1173966690?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;" title="1477987_People_Technology_3840x2160"></iframe></div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
             <!-- /.cta-four__bg -->
             <style>
@@ -2090,9 +2092,6 @@
                     if (entry.isIntersecting) {
                         // Element is visible -> Add class to animate IN
                         entry.target.classList.add('visible');
-                    } else {
-                        // Element is NOT visible -> Remove class so it resets
-                        entry.target.classList.remove('visible');
                     }
                 });
             }, observerOptions);
@@ -2120,11 +2119,6 @@
                         el.classList.add('animated');
                         // Clear inline animation name to let CSS take over
                         el.style.animationName = '';
-                    } else {
-                        // When scrolling OUT, remove class/hide so it restarts on return
-                        el.style.visibility = 'hidden';
-                        el.classList.remove('animated');
-                        el.style.animationName = 'none';
                     }
                 });
             }, observerOptions);
