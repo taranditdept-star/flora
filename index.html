@@ -175,7 +175,8 @@
             </div><!-- /.main-header__inner -->
         </header><!-- /.main-header -->
         <!-- main-slider-start -->
-        <section class="main-slider-two">
+        <!-- 💻 DESKTOP HERO SECTION -->
+        <section class="main-slider-two d-none d-md-block">
             <div class="main-slider-two__carousel alefox-owl__carousel owl-carousel" data-owl-options='{
 		"loop": true,
 		"animateOut": "fadeOut",
@@ -316,7 +317,23 @@
         </section>
         <!-- main-slider-end -->
 
-        <section class="feature-one">
+        <!-- 📱 MOBILE HERO SECTION -->
+        <section class="main-slider-two-mobile d-block d-md-none position-relative" style="background-color: var(--alefox-black); min-height: 480px; padding-top: 120px; padding-bottom: 60px;">
+            <div class="mobile-hero-bg" style="background-image: url(assets/images/backgrounds/slider-2-2.png); background-size: cover; background-position: center; position: absolute; top:0; left:0; width:100%; height:100%; z-index: 1;"></div>
+            <div class="mobile-hero-overlay" style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); z-index: 2;"></div>
+            <div class="container position-relative text-center" style="z-index: 3;">
+                <h5 class="text-white mb-2" style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px;">100% Quality Services</h5>
+                <h2 class="text-white mb-3" style="font-size: 32px; font-weight: 700; line-height: 1.2;">Flora Powering Your Home<br> with <span style="color: var(--alefox-yellow);">Gas & Solar</span></h2>
+                <p class="text-white mb-4" style="font-size: 16px;">One company. Two divisions.<br>Complete energy convenience.</p>
+                <a href="services.html" class="alefox-btn">
+                    <span class="alefox-btn__item"></span><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span>
+                    Our Services
+                </a>
+            </div>
+        </section>
+
+        <!-- 💻 DESKTOP FEATURES SECTION -->
+        <section class="feature-one d-none d-md-block">
             <div class="container">
                 <ul class="feature-one__list">
                     <li class="feature-one__item wow fadeInUp" data-wow-delay="00ms">
@@ -350,7 +367,37 @@
             </div>
         </section>
 
-        <section class="about-two">
+        <!-- 📱 MOBILE FEATURES SECTION -->
+        <section class="feature-one-mobile d-block d-md-none py-5" style="background-color: #f7f7f7;">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-12 text-center">
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <img src="assets/images/shapes/icon-solar.png" alt="Solar" style="width: 60px; height: 60px; margin-bottom: 15px;">
+                            <h3 style="font-size: 20px; color: var(--alefox-base); margin-bottom: 10px;">Solar Solutions</h3>
+                            <p style="font-size: 15px; color: var(--alefox-text);">Efficient solar panel installations for home & business.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <img src="assets/images/shapes/icon-gas.png" alt="Gas" style="width: 60px; height: 60px; margin-bottom: 15px;">
+                            <h3 style="font-size: 20px; color: var(--alefox-base); margin-bottom: 10px;">LPG Supply</h3>
+                            <p style="font-size: 15px; color: var(--alefox-text);">Reliable LPG gas delivery for cooking & heating.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center">
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <i class="fas fa-boxes" style="font-size: 50px; color: #002147; margin-bottom: 15px;"></i>
+                            <h3 style="font-size: 20px; color: var(--alefox-base); margin-bottom: 10px;">Hardware Kit</h3>
+                            <p style="font-size: 15px; color: var(--alefox-text);">Your local supplier for cylinders, kits, and cabling.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 💻 DESKTOP ABOUT SECTION -->
+        <section class="about-two d-none d-md-block">
             <div class="about-two__shape" style="background-image: url(assets/images/resources/about-2-shape-1.png);">
             </div>
             <div class="container">
@@ -434,7 +481,54 @@
             </div><!-- /.container -->
         </section><!-- /.about-two -->
 
-        <section class="service-two">
+        <!-- 📱 MOBILE ABOUT SECTION -->
+        <section class="about-two-mobile d-block d-md-none py-5">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <img src="assets/images/resources/about-2-1.png" alt="Flora Energy" class="img-fluid rounded shadow-sm mb-4">
+                    <h6 class="text-uppercase" style="color: var(--alefox-base); font-size: 14px; letter-spacing: 2px;">About Flora</h6>
+                    <h3 style="font-size: 28px; font-weight: 700; color: var(--alefox-black); line-height: 1.3;">Flora Energy Solutions</h3>
+                </div>
+                <p class="text-center text-muted mb-4" style="font-size: 15px;">
+                    Flora provides integrated gas and solar solutions built on safety, innovation, and reliability. Our mission is to power homes and businesses with energy systems that are affordable, efficient, and professionally supported.
+                </p>
+                
+                <div class="row g-3 mb-4">
+                    <div class="col-12">
+                        <div class="d-flex align-items-center bg-light p-3 rounded">
+                            <span class="fas fa-solar-panel me-3" style="font-size: 24px; color: var(--alefox-base);"></span>
+                            <div>
+                                <h5 class="m-0" style="font-size: 20px; font-weight: 700;">500+</h5>
+                                <p class="m-0 text-muted" style="font-size: 13px;">Solar Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex align-items-center bg-light p-3 rounded">
+                            <span class="fas fa-fire me-3" style="font-size: 24px; color: var(--alefox-base);"></span>
+                            <div>
+                                <h5 class="m-0" style="font-size: 20px; font-weight: 700;">15K+</h5>
+                                <p class="m-0 text-muted" style="font-size: 13px;">Gas Refills</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="list-unstyled mb-4" style="font-size: 15px; color: var(--alefox-text);">
+                    <li class="mb-2"><span class="icon-check-mark me-2" style="color: var(--alefox-base);"></span>Certified gas installations for safety.</li>
+                    <li><span class="icon-check-mark me-2" style="color: var(--alefox-base);"></span>High-efficiency solar systems.</li>
+                </ul>
+                <div class="text-center">
+                    <a href="about.html" class="alefox-btn w-100 text-center">
+                        <span class="alefox-btn__item"></span><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span>
+                        About More
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 💻 DESKTOP SERVICES SECTION -->
+        <section class="service-two d-none d-md-block">
             <div class="service-two__shape-one"
                 style="background-image: url(assets/images/resources/service-2-shape-1.png);"></div>
             <div class="service-two__shape-two"
@@ -680,7 +774,48 @@
         </section>
         <!-- Service End -->
 
-        <section class="project-one">
+        <!-- 📱 MOBILE SERVICES SECTION -->
+        <section class="service-two-mobile d-block d-md-none py-5" style="background-color: var(--alefox-black);">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h6 class="text-uppercase" style="color: var(--alefox-yellow); font-size: 14px; letter-spacing: 2px;">Our Best Services</h6>
+                    <h3 style="font-size: 28px; font-weight: 700; color: #ffffff;">Services This Working</h3>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="bg-white p-4 rounded text-center">
+                            <span class="fas fa-home mb-3" style="font-size: 30px; color: var(--alefox-base);"></span>
+                            <h4 style="font-size: 20px; font-weight: 700; color: var(--alefox-black); margin-bottom: 10px;">Residential Solar</h4>
+                            <p style="font-size: 15px; color: var(--alefox-text);">Complete hybrid and off-grid solar system installations.</p>
+                            <a href="service-details.html" style="color: var(--alefox-base); font-size: 15px; font-weight: 700;">Read More <i class="icofont-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-white p-4 rounded text-center">
+                            <span class="fas fa-fire mb-3" style="font-size: 30px; color: var(--alefox-base);"></span>
+                            <h4 style="font-size: 20px; font-weight: 700; color: var(--alefox-black); margin-bottom: 10px;">Rapid Gas Refills</h4>
+                            <p style="font-size: 15px; color: var(--alefox-text);">Fast, safe LP gas refilling for all cylinder sizes.</p>
+                            <a href="service-gas-refill.html" style="color: var(--alefox-base); font-size: 15px; font-weight: 700;">Read More <i class="icofont-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-white p-4 rounded text-center">
+                            <span class="fas fa-wrench mb-3" style="font-size: 30px; color: var(--alefox-base);"></span>
+                            <h4 style="font-size: 20px; font-weight: 700; color: var(--alefox-black); margin-bottom: 10px;">Maintenance & Repair</h4>
+                            <p style="font-size: 15px; color: var(--alefox-text);">Expert technical support for inverters and gas lines.</p>
+                            <a href="service-maintenance.html" style="color: var(--alefox-base); font-size: 15px; font-weight: 700;">Read More <i class="icofont-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a href="services.html" class="alefox-btn w-100"><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span>View All Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 💻 DESKTOP PROJECTS SECTION -->
+        <section class="project-one d-none d-md-block">
             <div class="container">
                 <div class="sec-title text-center">
 
@@ -896,8 +1031,45 @@
             </div><!-- /.container -->
         </section><!-- /.project-one -->
 
+        <!-- 📱 MOBILE PROJECTS SECTION -->
+        <section class="project-one-mobile d-block d-md-none py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h6 class="text-uppercase" style="color: var(--alefox-base); font-size: 14px; letter-spacing: 2px;">Our Projects</h6>
+                    <h3 style="font-size: 28px; font-weight: 700; color: var(--alefox-black);">Explore Our Latest Work</h3>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Solar Showcase -->
+                    <div class="col-12">
+                        <div class="position-relative mb-2">
+                            <img src="assets/images/project/project-1-1.png" alt="Solar" class="img-fluid rounded shadow-sm w-100">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-3" style="background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)); border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">
+                                <p class="text-warning mb-1" style="font-size: 13px; font-weight: 700;">Solar & Tech</p>
+                                <h5 class="text-white mb-0" style="font-size: 18px;">Residential Hybrid Solar</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Gas Showcase -->
+                    <div class="col-12 mt-4">
+                        <div class="position-relative mb-2">
+                            <img src="assets/images/project/project-2-1.png" alt="Gas" class="img-fluid rounded shadow-sm w-100">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-3" style="background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)); border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">
+                                <p class="text-warning mb-1" style="font-size: 13px; font-weight: 700;">Gas Solutions</p>
+                                <h5 class="text-white mb-0" style="font-size: 18px;">LPG Gas Installations</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="project.html" class="alefox-btn w-100"><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span>View All Projects</a>
+                </div>
+            </div>
+        </section>
 
-        <section class="work-process-one">
+        <!-- 💻 DESKTOP WORK PROCESS SECTION -->
+        <section class="work-process-one d-none d-md-block">
             <div class="container">
                 <div class="sec-title text-center">
 
@@ -1167,7 +1339,8 @@
 
 
         <!-- Testimonials Section Cloned from Execoore -->
-        <section class="testimonials-one">
+        <!-- 💻 DESKTOP TESTIMONIALS SECTION -->
+        <section class="testimonials-one d-none d-md-block">
             <div class="testimonials-container-fluid" style="position: relative;">
 
                 <!-- Headers -->
@@ -1442,8 +1615,80 @@
             </div>
         </section>
 
+        <!-- 📱 MOBILE TESTIMONIALS SECTION -->
+        <section class="testimonials-one-mobile d-block d-md-none py-5" style="background-color: var(--alefox-black);">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h6 class="text-uppercase" style="color: var(--alefox-yellow); font-size: 14px; letter-spacing: 2px;">Testimonials Feedback</h6>
+                    <h3 style="font-size: 28px; font-weight: 700; color: #ffffff;">What our clients think</h3>
+                </div>
+                
+                <div class="alefox-owl__carousel owl-carousel owl-theme" data-owl-options='{"items": 1, "margin": 20, "loop": true, "smartSpeed": 700, "nav": false, "dots": true, "autoplay": true}'>
+                    <div class="item">
+                        <div class="bg-white p-4 rounded text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="mb-4" style="font-size: 15px; font-style: italic; color: var(--alefox-text);">"Flora's solar installation has transformed our operations. We now have consistent power, and the team was incredibly professional."</p>
+                            <img src="assets/images/testimonials/user-1.png" alt="Client" class="rounded-circle mx-auto mb-3" style="width: 60px; height: 60px; object-fit: cover;">
+                            <h5 style="font-size: 16px; font-weight: 700; color: var(--alefox-black); margin-bottom: 0;">Mr Six Ncube</h5>
+                            <p style="font-size: 12px; color: var(--alefox-base);">Redeem Resources Africa</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="bg-white p-4 rounded text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="mb-4" style="font-size: 15px; font-style: italic; color: var(--alefox-text);">"The gas supply service is unmatched. Reliable, on-time deliveries every time. I highly recommend Flora for all gas needs."</p>
+                            <img src="assets/images/testimonials/user-2.png" alt="Client" class="rounded-circle mx-auto mb-3" style="width: 60px; height: 60px; object-fit: cover;">
+                            <h5 style="font-size: 16px; font-weight: 700; color: var(--alefox-black); margin-bottom: 0;">Mr Vuranda</h5>
+                            <p style="font-size: 12px; color: var(--alefox-base);">Sbali/Chitsano</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="bg-white p-4 rounded text-center">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="mb-4" style="font-size: 15px; font-style: italic; color: var(--alefox-text);">"Our farm's irrigation is now fully solar-powered thanks to Flora. Great investment and fantastic service."</p>
+                            <img src="assets/images/testimonials/user-4.png" alt="Client" class="rounded-circle mx-auto mb-3" style="width: 60px; height: 60px; object-fit: cover;">
+                            <h5 style="font-size: 16px; font-weight: 700; color: var(--alefox-black); margin-bottom: 0;">Mr Nyahwa</h5>
+                            <p style="font-size: 12px; color: var(--alefox-base);">Ecomatt Farm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 📱 MOBILE BLOG SECTION -->
+        <section class="blog-two-mobile d-block d-md-none py-5" style="background-color: #f7f7f7;">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h6 class="text-uppercase" style="color: var(--alefox-base); font-size: 14px; letter-spacing: 2px;">From the Blog</h6>
+                    <h3 style="font-size: 28px; font-weight: 700; color: var(--alefox-black);">Latest News & Articles</h3>
+                </div>
+                
+                <div class="d-flex flex-column gap-4">
+                    <div class="bg-white rounded overflow-hidden shadow-sm">
+                        <img src="assets/images/blog/blog-1.jpeg" alt="Blog" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+                        <div class="p-4">
+                            <p class="mb-2" style="font-size: 13px; color: var(--alefox-base); font-weight: 700;">20 JAN <span class="mx-2 text-muted">|</span> Admin</p>
+                            <h4 style="font-size: 18px; font-weight: 700; line-height: 1.4; margin-bottom: 10px;"><a href="blog-details-solar-efficiency.html" style="color: var(--alefox-black);">Maximizing Solar Efficiency for Your Home</a></h4>
+                            <p style="font-size: 14px; color: var(--alefox-text);">Discover how hybrid solar systems reduce your electricity bills.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="blog.html" class="alefox-btn w-100"><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span><span class="alefox-btn__item"></span>View All Posts</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 💻 DESKTOP BLOG SECTION -->
         <!-- blog -->
-        <section class="blog-two">
+        <section class="blog-two d-none d-md-block">
             <div class="blog-two__bg" style="background-image: url(assets/images/backgrounds/blog-bg-2-1.png);"></div>
             <div class="container">
                 <div class="sec-title text-center">
@@ -1850,7 +2095,8 @@
         </section><!-- /.cta-two -->
 
         <!-- FOOTER -->
-        <footer class="main-footer">
+        <!-- 💻 DESKTOP FOOTER -->
+        <footer class="main-footer d-none d-md-block">
             <div class="main-footer__bg"></div>
             <div class="main-footer__top">
                 <div class="container">
@@ -1982,6 +2228,41 @@
                 </div>
             </div>
         </footer><!-- /.main-footer -->
+
+        <!-- 📱 MOBILE FOOTER -->
+        <footer class="main-footer-mobile d-block d-md-none bg-dark text-white pt-5 pb-3" style="background-color: var(--alefox-black) !important;">
+            <div class="container text-center">
+                <div class="mb-4 d-flex justify-content-center gap-3">
+                    <img src="assets/images/flora-solar-logo.jpg" alt="Flora Solar" class="rounded" style="width: 120px; object-fit: contain;">
+                    <img src="assets/images/flora-gases-logo.jpg" alt="Flora Gas" class="rounded" style="width: 120px; object-fit: contain;">
+                </div>
+                
+                <p class="mb-4" style="font-size: 14px; color: #bbb;">Leading the way in sustainable energy and reliable gas solutions. We power your home and business with efficiency and care.</p>
+                
+                <div class="mb-4">
+                    <h5 class="text-white mb-3" style="font-size: 18px; font-weight: 700;">Solar & Tech Support</h5>
+                    <p class="mb-1" style="font-size: 14px;"><i class="fas fa-phone-alt me-2" style="color: var(--alefox-base);"></i> <a href="tel:+263715616149" class="text-white text-decoration-none">+263 71 561 6149</a></p>
+                    <p style="font-size: 14px;"><i class="fas fa-envelope me-2" style="color: var(--alefox-base);"></i> <a href="mailto:solar@flora.co.zw" class="text-white text-decoration-none">solar@flora.co.zw</a></p>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="text-white mb-3" style="font-size: 18px; font-weight: 700;">Flora Gases Support</h5>
+                    <p class="mb-1" style="font-size: 14px;"><i class="fas fa-phone-alt me-2" style="color: var(--alefox-base);"></i> <a href="tel:+263714704424" class="text-white text-decoration-none">+263 71 470 4424</a></p>
+                    <p style="font-size: 14px;"><i class="fas fa-envelope me-2" style="color: var(--alefox-base);"></i> <a href="mailto:gas@flora.co.zw" class="text-white text-decoration-none">gas@flora.co.zw</a></p>
+                </div>
+
+                <div class="d-flex justify-content-center gap-3 mb-4">
+                    <a href="https://www.facebook.com/profile.php?id=61582152146037" class="text-white"><i class="fab fa-facebook-f fs-5"></i></a>
+                    <a href="https://www.instagram.com/florasolarandtech/" class="text-white"><i class="fab fa-instagram fs-5"></i></a>
+                    <a href="https://x.com/FloraSolars" class="text-white"><i class="fab fa-twitter fs-5"></i></a>
+                    <a href="https://www.linkedin.com/in/flora-solars-47a7a2392/" class="text-white"><i class="fab fa-linkedin fs-5"></i></a>
+                </div>
+                
+                <hr style="border-color: rgba(255,255,255,0.1); margin: 20px 0;">
+                
+                <p class="mb-0" style="font-size: 13px; color: #888;">&copy; 2026 Flora. Designed by Mountplus.</p>
+            </div>
+        </footer>
 
     </div><!-- /.page-wrapper -->
 
